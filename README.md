@@ -19,8 +19,8 @@
     map generated. please take a look at "Map.html"
 
 ## Screenshots
-    ![](map_example1.jpg)
-    ![](map_example2.jpg)
-    ![](map_example3.jpg)
+![](map_example1.jpg)
+![](map_example2.jpg)
+![](map_example3.jpg)
 
 ## HTML
