@@ -3,7 +3,9 @@
     This project generates a map with two layers. 
     User inputs their coordinates and the year they want to get information about.
     First one - 'Films' - the layer includes 10 markers put on the places where the films were filmed.
-    Second one - 'Population' - is using 'world.json' to get the information about countries and their population. Countries that are colored blue and light-blue have the population that is less than 10 mil and 25 mil accordingly. Yellow - less than 50 mil. Orange - less than 100 mil. Red - more than 100 mil.
+    Second one - 'Population' - is using 'world.json' to get the information about countries and their population. 
+    Countries that are colored blue and light-blue have the population that is less than 10 mil and 25 mil accordingly. 
+    Yellow - less than 50 mil. Orange - less than 100 mil. Red - more than 100 mil.
 
 ## Requirements
 ```pip install folium```
