@@ -10,7 +10,12 @@ geolocator = Nominatim(user_agent="specify_your_app_name_here", timeout=100)
 geocode = RateLimiter(geolocator.geocode, min_delay_seconds=0.1, max_retries=1)
 
 
-def read_file(inp_year):
+def read_file(inp_year: int) -> dict:
+    '''
+    this function reads the csv file and returns a dictionary with 
+    location as key and list of movies filmed in that location in the given year
+    returns information only about first 600 found movies
+    '''
     data = pandas.read_csv(
         "locations.csv", error_bad_lines=False, warn_bad_lines=False)
     movie = data['movie']
@@ -32,8 +37,10 @@ def read_file(inp_year):
     return loc_dict
 
 
-def distance_sorted(locations_d, entered_lat, entered_long):
-
+def distance_sorted(locations_d: dict, entered_lat: float, entered_long: float) -> list:
+    '''
+    this function return a sorted list of the 10 closest places where the movies were filmed.
+    '''
     points = []
     for loc in locations_d:
         location = geolocator.geocode(loc)
@@ -49,8 +56,10 @@ def distance_sorted(locations_d, entered_lat, entered_long):
     return points[:10]
 
 
-def marking_locations(location_list):
-
+def marking_locations(location_list: list):
+    '''
+    returns a feature group with 10 markers that show where the movies were filmed
+    '''
     fg_film = folium.FeatureGroup(name="Films")
 
     for loc in location_list:
@@ -61,6 +70,9 @@ def marking_locations(location_list):
 
 
 def population_layer():
+    '''
+    returns a feature group with a geojson object
+    '''
     fg_pp = folium.FeatureGroup(name="Population",)
 
     fg_pp.add_child(folium.GeoJson(data=open('world.json', 'r',
