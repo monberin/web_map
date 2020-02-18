@@ -6,21 +6,41 @@
     Second one - 'Population' - is using 'world.json' to get the information about countries and their population. Countries that are colored blue and light-blue have the population that is less than 10 mil and 25 mil accordingly. Yellow - less than 50 mil. Orange - less than 100 mil. Red - more than 100 mil.
 
 ## Requirements
-    pip install folium
-    pip install geopy
-    pip install pandas
+```pip install folium```
+
+```pip install geopy```
+
+```pip install pandas```
 
 ## Example of execution
-    Please enter a year you would like to have a map for: 1965
-    Please enter your location (format: lat, long): 49.842957,24.031111
-    generating map...
-    adding marks...
-    adding population...
-    map generated. please take a look at "Map.html"
 
+```Please enter a year you would like to have a map for: 1965```
+
+```Please enter your location (format: lat, long): 49.842957,24.031111```
+
+```generating map...```
+
+```adding marks...```
+
+```adding population...```
+
+```map generated. please take a look at "Map.html"```
 ## Screenshots
+### map with both layers
 ![](map_example1.jpg)
+### map with only the 'Films' layer active
 ![](map_example2.jpg)
+### displayed message: name of the movie that was filmed there
 ![](map_example3.jpg)
 
 ## HTML
+```<!DOCTYPE html> ```- an instruction to the web browser about what version of HTML the page is written in.
+
+```<head>``` - contains all the head elements.
+
+```<script>``` - contains scripting statements.
+
+```<style>``` - defines style information for HTML document.
+
+```<body>``` - defines the documents body.
+
